@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <springProperty scope="context" name="applicationName" source="spring.application.name"/>
+
+    <contextName>${applicationName}</contextName>
+
+    <property name="LOG_FILE" value="${java.io.tmpdir}/logs/${applicationName}.log}"/>
+
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+</configuration>
